@@ -19,10 +19,9 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav variant="pills" className="ms-auto" defaultActiveKey="/" >
-                        <Nav.Link data-tip data-for="wipTip" className="nav-link" to="/gallery" as={Link} href="/gallery" > Gallery</Nav.Link>
                         {/* <Nav.Link data-tip data-for="wipTip" className="nav-link" to="/video_streaming" as={Link} href="/video_streaming" > Display </Nav.Link>
-                        <Nav.Link data-tip data-for="logoutTip" className="nav-link" to="/logout" as={Link} href="/logout" > Salir</Nav.Link>
-                        <Nav.Link data-tip data-for="aboutTip" className="nav-link" to="/about" as={Link} href="/about" > iSANDEx</Nav.Link> */}
+                        <Nav.Link data-tip data-for="logoutTip" className="nav-link" to="/logout" as={Link} href="/logout" > Salir</Nav.Link> */}
+                        <Nav.Link data-tip data-for="aboutTip" className="nav-link" to="/about" as={Link} href="/about" > iSANDEx</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

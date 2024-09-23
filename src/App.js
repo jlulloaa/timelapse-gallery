@@ -8,8 +8,8 @@ import { HashRouter  as Router } from 'react-router-dom';
 import Footer from './components/footer';
 import NavBar from './components/navbar';
 
-import Home from './components/home';
 import Gallery from './components/gallery';
+import About from './components/about';
 
 // import logo from './imgs/logo.svg';
 import './styles/App.css';
@@ -31,8 +31,8 @@ function App() {
         {/* Add the navigation bar */}
         <NavBar/>
         <Routes>
-          <Route path="/" exact element={<Home/>} />
-          <Route path="/gallery" exact element={<Gallery/>} />
+          <Route path="/" exact element={<Gallery/>} />
+          <Route path="/about" exact element={<About/>} />
         </Routes>
         <Footer />
       </Router>
