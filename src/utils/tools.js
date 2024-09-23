@@ -1,6 +1,6 @@
 import {Tooltip as ReactTooltip} from "react-tooltip";
 // import { useEffect } from 'react';
-// import Spinner from 'react-bootstrap/Spinner';
+import Spinner from 'react-bootstrap/Spinner';
 // import { Link } from 'react-router-dom';
 
 const InitImage = (urlStr) => {
@@ -9,6 +9,13 @@ const InitImage = (urlStr) => {
     return image;
   }
   
+const LoadingPage = () => {
+    return (
+        <Spinner animation="border" role="status">
+        <span className="visually-hidden">Loading...</span>
+        </Spinner>
+    );
+}
 
 
   const ToolTips = () => {
@@ -66,4 +73,4 @@ const InitImage = (urlStr) => {
     )
 };
 
-export {InitImage, ToolTips};
+export {InitImage, LoadingPage, ToolTips};

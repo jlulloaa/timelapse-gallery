@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 // Because I'm using them here, I have to import them from here, not in index.js
 import {
   Routes,
@@ -10,38 +9,16 @@ import Footer from './components/footer';
 import NavBar from './components/navbar';
 
 import Home from './components/home';
+import Gallery from './components/gallery';
 
 // import logo from './imgs/logo.svg';
 import './styles/App.css';
 import { Container } from 'react-bootstrap';
 
-// Tools required to connect the S3 bucket
-import {
-  ListObjectsCommand,
-  ListObjectsCommandOutput,
-  S3Client,
-} from "@aws-sdk/client-s3";
-import { fromCognitoIdentityPool } from "@aws-sdk/credential-providers";
 
 
 function App() {
 
-  // const [objects, setObjects] = useState<
-  //   Required<ListObjectsCommandOutput>["Contents"]
-  // >([]);
-  const [objects, setObjects] = useState([]);
-
-  useEffect(() => {
-    const client = new S3Client({
-      region: process.env.REACT_APP_REGION,
-      credentials: fromCognitoIdentityPool({
-        clientConfig: { region: process.env.REACT_APP_REGION },
-        identityPoolId: process.env.REACT_APP_IDENTITYPOOLID
-      }),
-    });
-    const command = new ListObjectsCommand({ Bucket: process.env.REACT_APP_BUCKET });
-    client.send(command).then(({ Contents }) => setObjects(Contents || []));
-  }, []);
 
   return (
     <Container className="App">
@@ -53,14 +30,9 @@ function App() {
         </h1>
         {/* Add the navigation bar */}
         <NavBar/>
-        <div className="App">
-          {objects.map((o) => (
-            <div key={o.ETag}>{o.Key}</div>
-          ))}
-        </div>
-
         <Routes>
           <Route path="/" exact element={<Home/>} />
+          <Route path="/gallery" exact element={<Gallery/>} />
         </Routes>
         <Footer />
       </Router>
