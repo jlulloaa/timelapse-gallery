@@ -25,7 +25,7 @@ function App() {
       <Router>
         <h1> 
           {/* <img className="img-fluid float-left" src="./bank_logo.png"  width="8%" alt="Bank Logo Left"/>   */}
-          <span> <h3>Time Lapse Gallery</h3> </span>
+          <span> <h3>FrutIQ - Gallery</h3> </span>
           {/* <img className="img-fluid float-right" src="./bank_logo.png" width="8%" alt="Bank Logo Right"/>  */}
         </h1>
         {/* Add the navigation bar */}

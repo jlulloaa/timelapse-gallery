@@ -14,7 +14,7 @@ function NavBar() {
         <Navbar collapseOnSelect bg="primary" variant="dark" expand="lg">
             <Container>
                 <Navbar.Brand data-tip data-for="homeTip" href="/" onClick={() => window.location.reload()}> 
-                    <img src="./isandex_icon.png" height="32px" alt="iSANDEx Logo"/>
+                    <img src="imgs/isandex_icon.png" height="32px" alt="iSANDEx Logo"/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
